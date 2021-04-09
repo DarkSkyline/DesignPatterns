@@ -11,8 +11,8 @@ public class Main {
         //TODO: Calculate the rentability of energy by region.
         // Design Pattern: Bridge
 
-        //TODO: Panels with the same caracteristics
-        // Design Pattern:
+        //TODO: Panels with the same characteristic
+        // Design Pattern: ObjectPool
 
         //TODO: Need save the data from the last 3 states of each pannel
         // Design Pattern: Memento
@@ -21,6 +21,5 @@ public class Main {
         // Design Pattern:
 
         //TODO: Design the UML file.
-        // Design Pattern:
     }
 }
