@@ -25,7 +25,7 @@ public class Auth {
     }
 
     public void register(String username, String password) throws ExistingUserException {
-        if (!users.containsKey(username)) {
+        if (users.containsKey(username)) {
             throw new ExistingUserException();
         }
         users.put(username, password);

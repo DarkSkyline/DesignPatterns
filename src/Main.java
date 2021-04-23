@@ -11,10 +11,14 @@ public class Main {
         Auth.getInstance().register("user", "password");
 
         System.out.println("we will do a bad login");
-        Auth.getInstance().login("user", "");
+        if(!Auth.getInstance().login("user", "")){
+            System.out.println("The user doesn't exists");
+        }
 
         System.out.println("we will proceed the login");
-        Auth.getInstance().login("user", "password");
+        if(Auth.getInstance().login("user", "password")){
+            System.out.println("You have logged successfully");
+        }
 
         //TODO: save the daily production
         // -> sectors; parks; regions; countries;
