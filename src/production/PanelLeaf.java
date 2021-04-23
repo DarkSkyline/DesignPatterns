@@ -1,6 +1,6 @@
 package production;
 
-public class ProductionLeaf implements ProductionComponent{
+public class PanelLeaf implements ProductionComponent{
 
     private double production;
 
