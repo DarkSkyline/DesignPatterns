@@ -11,15 +11,12 @@ public class Main {
     public static void main(String[] args) throws UndefinedUserException, ExistingUserException, ExistingPanelException, NotExistingSnapshotException {
         // System of authentication
         // Design Pattern: Singleton
-        System.out.println("we will create an user: {user} : {password}");
         Auth.getInstance().register("user", "password");
 
-        System.out.println("we will do a bad login");
         if(!Auth.getInstance().login("user", "")){
             System.out.println("The user doesn't exists");
         }
 
-        System.out.println("we will proceed the login");
         if(Auth.getInstance().login("user", "password")){
             System.out.println("You have logged successfully");
         }

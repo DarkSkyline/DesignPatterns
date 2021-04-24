@@ -19,6 +19,7 @@ public class Auth {
     }
 
     public Boolean login(String username, String password) throws UndefinedUserException {
+        System.out.println("You try to login with user:{"+ username +"} and password: {"+ password +"}");
         if (!users.containsKey(username))
             throw new UndefinedUserException();
         return users.get(username).equals(password);
@@ -28,6 +29,7 @@ public class Auth {
         if (users.containsKey(username)) {
             throw new ExistingUserException();
         }
+        System.out.println("we will create an user: {"+username+"} : {"+password+"}");
         users.put(username, password);
         System.out.println("User created successfully");
     }
