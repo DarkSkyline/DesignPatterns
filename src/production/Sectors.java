@@ -11,6 +11,9 @@ public class Sectors implements ProductionComponent{
 
     }
 
+    public Double getProduction(){
+        return null;
+    }
     public void addFilho(ProductionComponent filho){
 
     }
@@ -19,7 +22,7 @@ public class Sectors implements ProductionComponent{
 
     }
 
-    public void getNsetor(){};
+    public void getnSetor(){};
 
     public void setnSetor(){};
 }
