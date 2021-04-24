@@ -3,15 +3,21 @@ package composite;
 import factory.ProductsInterface;
 import java.util.ArrayList;
 
-public class Country extends Regions implements ProductsInterface {
-    private ArrayList<Regions> filhos = new ArrayList<>();
+public class Country extends Localization {
+    private ArrayList<Localization> localizations;
     private String pais;
 
-    public Country() { }
+    public Country() {
+        localizations = new ArrayList<>();
+    }
 
-    public void addFilho(Regions filho) { }
+    public void addChild(Localization child) {
+        this.localizations.add(child);
+    }
 
-    public void removeFilho(Regions filho) { }
+    public void removeChild(Localization child) {
+        this.localizations.remove(child);
+    }
 
     public void getPais() { }
 

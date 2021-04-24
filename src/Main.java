@@ -29,10 +29,6 @@ public class Main {
             System.out.println("You have logged successfully");
         }
 
-        //TODO: save the daily production
-        // -> sectors; parks; regions; countries;
-        // Design Pattern: Composite
-
         //TODO: Calculate the rentability of energy by region.
         // Design Pattern: Bridge
         APIRequest request = new APIRequest();
@@ -44,10 +40,8 @@ public class Main {
         System.out.println("ID Content: {"+ idContent +"}");
         System.out.println("Content: {"+ content +"}");
 
-        //TODO: Panels with the same characteristic
-        // Design Pattern: Factory
-
         //TODO: Need save the data from the last 3 states of each panel
+        // Actually save only the state from the Panel to a backup class (Memento Pattern)
         // Design Pattern: Memento
         Panels panel = new Panels();
         Backup backup = new Backup(panel);

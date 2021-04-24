@@ -14,7 +14,7 @@ public class FactoryProduct {
 
         if(type.equals("panel")) product = new Panels();
         else if (type.equals("sector")) product = new Sectors();
-        else if (type.equals("country")) product = new Country();
+        else if (type.equals("country")) product = (ProductsInterface) new Country();
         else if (type.equals("region")) product = new Regions();
         else throw new UndefinedProductException();
 

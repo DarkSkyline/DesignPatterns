@@ -5,14 +5,18 @@ import factory.ProductsInterface;
 import java.util.ArrayList;
 
 public class Parks extends Sectors implements ProductsInterface {
-    private ArrayList<Sectors> filhos = new ArrayList<>();
+    private ArrayList<Sectors> sectors = new ArrayList<>();
     private String nomeParque;
 
     public Parks() { }
 
-    public void addFilho(Sectors filho) { }
+    public void addChild(Sectors child) {
+        this.sectors.add(child);
+    }
 
-    public void removeFilho(Sectors filho) { }
+    public void removeChild(Sectors child) {
+        this.sectors.remove(child);
+    }
 
     public void getNomeparque() { }
 

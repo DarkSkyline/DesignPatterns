@@ -3,14 +3,24 @@ package composite;
 import StatePanels.Memento;
 import factory.ProductsInterface;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Panels implements ProductionComponent, ProductsInterface {
+public class Panels extends Parks implements ProductionComponent, ProductsInterface {
     public HashMap<String, Boolean> panelList = new HashMap<>();
+    private ArrayList<Parks> park = new ArrayList<>();
     private double production;
     private String brand = null;
 
     public Panels() { }
+
+    public void addChild(Parks child) {
+        this.park.add(child);
+    }
+
+    public void removeChild(Parks child) {
+        this.park.remove(child);
+    }
 
     public void addPanel(String panelName) throws ExistingPanelException {
         if(this.panelList.containsKey(panelName))

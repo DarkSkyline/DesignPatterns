@@ -4,16 +4,20 @@ import factory.ProductsInterface;
 
 import java.util.ArrayList;
 
-public class Regions extends Parks implements ProductsInterface {
-    private ArrayList<Parks> filhos = new ArrayList<>();
+public class Regions extends Country implements ProductsInterface {
+    private ArrayList<Country> country = new ArrayList<>();
     private String nSetor;
     private String brand = null;
 
     public Regions() { }
 
-    public void addFilho(Parks filho) { }
+    public void addChild(Country child) {
+        this.country.add(child);
+    }
 
-    public void removeFilho(Parks filho) { }
+    public void removeChild(Country child) {
+        this.country.remove(child);
+    }
 
     public void getRegiao() { }
 
