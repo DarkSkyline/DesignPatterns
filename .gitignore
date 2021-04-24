@@ -1,5 +1,4 @@
 # Project exclude paths
-/out/
 SoftwareEngineering.iml
 ./idea
 ./out/
@@ -8,3 +7,4 @@ SoftwareEngineering.iml
 /.idea/vcs.xml
 /.idea/uiDesigner.xml
 /.idea/modules.xml
+/out/

@@ -1,8 +1,8 @@
-package inversor;
+package decorator;
 
 public class PowerMeter extends Sensor{
 
-    public PowerMeter(Inversor inversor) {
+    public PowerMeter(InversorInterface inversor) {
         super(inversor);
     }
 }

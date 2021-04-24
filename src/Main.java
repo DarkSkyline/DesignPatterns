@@ -29,7 +29,7 @@ public class Main {
             System.out.println("You have logged successfully");
         }
 
-        //TODO: Calculate the rentability of energy by region.
+        // Calculate the rentability of energy by region.
         // Design Pattern: Bridge
         APIRequest request = new APIRequest();
         String idService = request.addService(new Calculation());
@@ -40,7 +40,7 @@ public class Main {
         System.out.println("ID Content: {"+ idContent +"}");
         System.out.println("Content: {"+ content +"}");
 
-        //TODO: Need save the data from the last 3 states of each panel
+        // Need save the data from the last 3 states of each panel
         // Actually save only the state from the Panel to a backup class (Memento Pattern)
         // Design Pattern: Memento
         Panels panel = new Panels();

@@ -1,8 +1,8 @@
-package inversor;
+package decorator;
 
 public class Wifi extends Sensor{
 
-    public Wifi(Inversor inversor) {
+    public Wifi(InversorInterface inversor) {
         super(inversor);
     }
 }

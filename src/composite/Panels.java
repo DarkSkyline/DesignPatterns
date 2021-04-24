@@ -9,7 +9,7 @@ import java.util.HashMap;
 public class Panels extends Parks implements ProductionComponent, ProductsInterface {
     public HashMap<String, Boolean> panelList = new HashMap<>();
     private ArrayList<Parks> park = new ArrayList<>();
-    private double production;
+    public Double production;
     private String brand = null;
 
     public Panels() { }
@@ -47,7 +47,7 @@ public class Panels extends Parks implements ProductionComponent, ProductsInterf
         return this.production;
     }
 
-    public void setProduction(double production){
+    public void setProduction(Double production){
         this.production = production;
     }
 

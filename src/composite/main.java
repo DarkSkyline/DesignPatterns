@@ -29,6 +29,8 @@ public class main {
         Panels panels = new Panels();
         panels.setLabel("Panel 1");
         panels.addChild(parks);
-        panels.setProduction(Math.random());
+        Double rand = Math.random();
+        panels.setProduction(rand);
+        System.out.println(panels.getProduction());
     }
 }
