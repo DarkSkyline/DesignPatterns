@@ -1,11 +1,14 @@
 package composite;
 
 import StatePanels.Memento;
+import factory.ProductsInterface;
+
 import java.util.HashMap;
 
-public class Panels implements ProductionComponent{
+public class Panels implements ProductionComponent, ProductsInterface {
     public HashMap<String, Boolean> panelList = new HashMap<>();
     private double production;
+    private String brand = null;
 
     public Panels() { }
 
@@ -36,5 +39,15 @@ public class Panels implements ProductionComponent{
 
     public void setProduction(double production){
         this.production = production;
+    }
+
+    @Override
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    @Override
+    public String getBrand() {
+        return this.brand;
     }
 }

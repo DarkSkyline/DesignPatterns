@@ -1,6 +1,7 @@
 package StatePanels;
 
 import composite.Panels;
+import factory.ProductsInterface;
 
 import java.util.ArrayList;
 

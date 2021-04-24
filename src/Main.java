@@ -2,6 +2,10 @@ import StatePanels.Backup;
 import StatePanels.NotExistingSnapshotException;
 import bridge.APIRequest;
 import bridge.Calculation;
+import factory.FactoryModules;
+import factory.FactoryProduct;
+import factory.ProductsInterface;
+import factory.UndefinedProductException;
 import singleton.Auth;
 import singleton.ExistingUserException;
 import singleton.UndefinedUserException;
@@ -12,7 +16,7 @@ import javax.management.ServiceNotFoundException;
 
 public class Main {
 
-    public static void main(String[] args) throws UndefinedUserException, ExistingUserException, ExistingPanelException, NotExistingSnapshotException, ServiceNotFoundException {
+    public static void main(String[] args) throws UndefinedUserException, ExistingUserException, ExistingPanelException, NotExistingSnapshotException, ServiceNotFoundException, UndefinedProductException {
         // System of authentication
         // Design Pattern: Singleton
         Auth.getInstance().register("user", "password");
