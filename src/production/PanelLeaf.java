@@ -12,6 +12,7 @@ public class PanelLeaf implements ProductionComponent{
     public void addPanel(String panelName) throws ExistingPanelException {
         if(this.panelList.containsKey(panelName))
             throw new ExistingPanelException();
+        System.out.println("Add a panel with the name: {" + panelName + "}");
         this.panelList.put(panelName,true);
     }
 

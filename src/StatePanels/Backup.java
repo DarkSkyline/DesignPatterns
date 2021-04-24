@@ -20,6 +20,7 @@ public class Backup {
         if(panelId < 0 || panelId > this.panelSnapshot.size() -1){
             throw new NotExistingSnapshotException();
         }
+        System.out.println("Restore the snapshots with ID: {"+ panelId +"}");
         this.panel.restore(this.panelSnapshot.get(panelId));
     }
 }
