@@ -1,13 +1,13 @@
-package production;
+package composite;
 
 import StatePanels.Memento;
 import java.util.HashMap;
 
-public class PanelLeaf implements ProductionComponent{
+public class Panels implements ProductionComponent{
     public HashMap<String, Boolean> panelList = new HashMap<>();
     private double production;
 
-    public PanelLeaf() { }
+    public Panels() { }
 
     public void addPanel(String panelName) throws ExistingPanelException {
         if(this.panelList.containsKey(panelName))

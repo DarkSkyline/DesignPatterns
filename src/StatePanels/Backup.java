@@ -1,14 +1,14 @@
 package StatePanels;
 
-import production.PanelLeaf;
+import composite.Panels;
 
 import java.util.ArrayList;
 
 public class Backup {
-    private PanelLeaf panel;
+    private Panels panel;
     ArrayList<Memento> panelSnapshot = new ArrayList<>();
 
-    public Backup(PanelLeaf panel){
+    public Backup(Panels panel){
         this.panel = panel;
     }
 

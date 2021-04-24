@@ -1,4 +1,4 @@
-package production;
+package composite;
 
 public interface ProductionComponent {
 

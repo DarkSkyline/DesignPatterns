@@ -1,10 +1,10 @@
 import StatePanels.Backup;
 import StatePanels.NotExistingSnapshotException;
-import auth.Auth;
-import auth.ExistingUserException;
-import auth.UndefinedUserException;
-import production.ExistingPanelException;
-import production.PanelLeaf;
+import singleton.Auth;
+import singleton.ExistingUserException;
+import singleton.UndefinedUserException;
+import composite.ExistingPanelException;
+import composite.Panels;
 
 public class Main {
 
@@ -31,9 +31,9 @@ public class Main {
         //TODO: Panels with the same characteristic
         // Design Pattern: Factory
 
-        // Need save the data from the last 3 states of each pannel
+        //TODO: Need save the data from the last 3 states of each panel
         // Design Pattern: Memento
-        PanelLeaf panel = new PanelLeaf();
+        Panels panel = new Panels();
         Backup backup = new Backup(panel);
         backup.takeSnapshot();
         panel.addPanel("Panel 1");

@@ -1,10 +1,10 @@
-package production;
+package composite;
 
 import java.util.ArrayList;
 
 public class Sectors implements ProductionComponent{
 
-    private ArrayList<ProductionComponent> producao = new ArrayList<ProductionComponent>();
+    private ArrayList<ProductionComponent> producao = new ArrayList<>();
     private int nSetor;
 
     public Sectors(){
@@ -22,7 +22,7 @@ public class Sectors implements ProductionComponent{
 
     }
 
-    public void getnSetor(){};
+    public void getnSetor(){}
 
-    public void setnSetor(){};
+    public void setnSetor(){}
 }

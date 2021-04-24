@@ -1,10 +1,8 @@
 package Calculos;
 
-import production.Regioes;
-
-import java.util.HashMap;
+import composite.Regions;
 
 public interface CalculoInterface {
     //HashMap<String, Float>
-    public void Calculo(Regioes regiao);
+    void Calculo(Regions regiao);
 }
