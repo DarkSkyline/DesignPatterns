@@ -29,6 +29,7 @@ public class Auth {
             throw new ExistingUserException();
         }
         users.put(username, password);
+        System.out.println("User created successfully");
     }
 
    public void resetUsers() {

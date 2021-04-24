@@ -1,21 +1,25 @@
 package StatePanels;
 
-import paineis.Painel;
+import production.PanelLeaf;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 
 public class Backup {
-    HashMap<String,String> paineisSnapshot = new HashMap<>();
+    private PanelLeaf panel;
+    ArrayList<Memento> panelSnapshot = new ArrayList<>();
 
-    public Backup(Painel painel){
-
+    public Backup(PanelLeaf panel){
+        this.panel = panel;
     }
 
     public void takeSnapshot(){
-
+        this.panelSnapshot.add(panel.backup());
     }
 
-    public void restoreSnapshot(String painel){
-
+    public void restoreSnapshot(int panelId) throws NotExistingSnapshotException {
+        if(panelId < 0 || panelId > this.panelSnapshot.size() -1){
+            throw new NotExistingSnapshotException();
+        }
+        this.panel.restore(this.panelSnapshot.get(panelId));
     }
 }

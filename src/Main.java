@@ -5,7 +5,7 @@ import auth.UndefinedUserException;
 public class Main {
 
     public static void main(String[] args) throws UndefinedUserException, ExistingUserException {
-        //TODO: System of authentication
+        // System of authentication
         // Design Pattern: Singleton
         System.out.println("we will create an user: {user} : {password}");
         Auth.getInstance().register("user", "password");
@@ -36,6 +36,5 @@ public class Main {
         //TODO: Each sector need have some more configurations
         // Design Pattern: Decorator
 
-        //TODO: Design the UML file.
     }
 }
