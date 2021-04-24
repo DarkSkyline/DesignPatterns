@@ -1,14 +1,18 @@
 import StatePanels.Backup;
 import StatePanels.NotExistingSnapshotException;
+import bridge.APIRequest;
+import bridge.Calculation;
 import singleton.Auth;
 import singleton.ExistingUserException;
 import singleton.UndefinedUserException;
 import composite.ExistingPanelException;
 import composite.Panels;
 
+import javax.management.ServiceNotFoundException;
+
 public class Main {
 
-    public static void main(String[] args) throws UndefinedUserException, ExistingUserException, ExistingPanelException, NotExistingSnapshotException {
+    public static void main(String[] args) throws UndefinedUserException, ExistingUserException, ExistingPanelException, NotExistingSnapshotException, ServiceNotFoundException {
         // System of authentication
         // Design Pattern: Singleton
         Auth.getInstance().register("user", "password");
@@ -25,8 +29,16 @@ public class Main {
         // -> sectors; parks; regions; countries;
         // Design Pattern: Composite
 
-        //TODO: Calculate the rentability of energy by region.
+        // Calculate the rentability of energy by region.
         // Design Pattern: Bridge
+        APIRequest request = new APIRequest();
+        String idService = request.addService(new Calculation());
+        String idContent = request.setContent(idService, "12");
+        //String content = request.getContent(idService, idContent);
+
+        System.out.println("ID Service: {"+ idService +"}");
+        System.out.println("ID Content: {"+ idContent +"}");
+        //System.out.println("Content: {"+ content +"}");
 
         //TODO: Panels with the same characteristic
         // Design Pattern: Factory

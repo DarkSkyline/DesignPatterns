@@ -1,4 +1,4 @@
-package Calculos;
+package bridge;
 
 public interface ImplementationCalculos {
     void CalculoDiurno();
