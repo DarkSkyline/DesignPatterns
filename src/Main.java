@@ -29,16 +29,16 @@ public class Main {
         // -> sectors; parks; regions; countries;
         // Design Pattern: Composite
 
-        // Calculate the rentability of energy by region.
+        //TODO: Calculate the rentability of energy by region.
         // Design Pattern: Bridge
         APIRequest request = new APIRequest();
         String idService = request.addService(new Calculation());
         String idContent = request.setContent(idService, "12");
-        //String content = request.getContent(idService, idContent);
+        String content = request.getContent(idService, idContent);
 
         System.out.println("ID Service: {"+ idService +"}");
         System.out.println("ID Content: {"+ idContent +"}");
-        //System.out.println("Content: {"+ content +"}");
+        System.out.println("Content: {"+ content +"}");
 
         //TODO: Panels with the same characteristic
         // Design Pattern: Factory

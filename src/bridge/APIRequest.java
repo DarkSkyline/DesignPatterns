@@ -26,7 +26,7 @@ public class APIRequest extends Object{
 
     public String setContent(String serviceId, String content) throws ServiceNotFoundException {
         if(this.services.containsKey(serviceId)){
-            return this.services.put(serviceId, content);
+            return this.services.get(serviceId).setContent(content);
         }
         throw new ServiceNotFoundException();
     }
