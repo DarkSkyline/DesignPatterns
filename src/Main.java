@@ -43,15 +43,19 @@ public class Main {
         // Need save the data from the last 3 states of each panel
         // Actually save only the state from the Panel to a backup class (Memento Pattern)
         // Design Pattern: Memento
+        System.out.println("---------------------");
         Panels panel = new Panels();
         Backup backup = new Backup(panel);
         backup.takeSnapshot();
+        System.out.println("First Snapshot");
         panel.addPanel("Panel 1");
+        System.out.println("Second Snapshot");
         backup.takeSnapshot();
         panel.addPanel("Panel 2");
-        System.out.println(panel.getPanelList().size());
+        System.out.println("Size of list:" + panel.getPanelList().size());
+        System.out.println("Restore Last Snapshot");
         backup.restoreSnapshot(1);
-        System.out.println(panel.getPanelList().size());
+        System.out.println("Size of list:" + panel.getPanelList().size());
 
         //TODO: Each sector need have some more configurations
         // Design Pattern: Decorator
